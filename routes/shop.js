@@ -7,7 +7,7 @@ router.get('/', function(req, res) {
     if(err)
       res.render("404page");
     else{
-      // console.log(courses);
+      console.log(courses);
       res.render("index", {data: courses});
     }
   });
@@ -20,6 +20,17 @@ router.get('/courses', function(req, res){
     else{
       // console.log(courses);
       res.render("courses", {data: courses});
+    }
+  });
+});
+
+router.get('/course/:id', function(req, res){
+  id = req.params.id;
+  Course.findById(id, function(err, course){
+    if(err)
+      res.render("404page");
+    else{
+      res.render("coursedetail", {course: course});
     }
   });
 })

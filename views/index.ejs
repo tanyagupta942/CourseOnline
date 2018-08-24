@@ -90,7 +90,7 @@
 					<% if(parseFloat(course['course_views'].replace(/,/g, '')) > 36000){ %>
 						<div class="col-lg-3 mb-4" style="padding-bottom:0!important;">
 							<div class="product-entry border" style="padding-bottom:0!important;">
-								<a href="#" class="prod-img">
+								<a href="/course/<%= course['_id'] %>" class="prod-img">
 									<center><img src="<%=course['course_img']%>" class="img-fluid" alt="<%=course['course_title']%>"></center>
 								</a>
 								<div class="desc" style="padding-bottom:0!important;">
