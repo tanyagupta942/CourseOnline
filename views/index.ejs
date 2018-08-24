@@ -8,12 +8,22 @@
 						<div class="owl-carousel2">
 							<div class="item">
 								<div class="col">
-									<h3><a href="#">25% off (Almost) Everything! Use Code: Summer Sale</a></h3>
+									<h3><a href="#">Learn new things for a better future</a></h3>
 								</div>
 							</div>
 							<div class="item">
 								<div class="col">
-									<h3><a href="#">Our biggest sale yet 50% off all summer shoes</a></h3>
+									<h3><a href="#">Where dreams come true</a></h3>
+								</div>
+							</div>
+							<div class="item">
+								<div class="col">
+									<h3><a href="#">Enhance your skills</a></h3>
+								</div>
+							</div>
+							<div class="item">
+								<div class="col">
+									<h3><a href="#">Be a better version of yourself</a></h3>
 								</div>
 							</div>
 						</div>
@@ -26,15 +36,16 @@
 
 	<style>
 		.parallax {
-			background-image: url("https://images.pexels.com/photos/191429/pexels-photo-191429.jpeg");
+			background-image: url("https://images.pexels.com/photos/54216/pexels-photo-54216.jpeg");
 			min-height: 400px;
 			background-attachment: fixed;
 			background-position: center;
 			background-repeat: no-repeat;
 			background-size: cover;
 		}
+
 		.parallax1 {
-			background-image: url("https://images.pexels.com/photos/276267/pexels-photo-276267.jpeg");
+			background-image: url("https://images.pexels.com/photos/7103/writing-notes-idea-conference.jpg");
 			min-height: 400px;
 			background-attachment: fixed;
 			background-position: center;
@@ -48,7 +59,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-12 text-center">
-					<h2 class="intro">We provide you with top-quality printed products at affordable prices.</h2>
+					<h3 class="description">{ CourseOnline__ } is the place where dreams come true. We provide all the courses free off cost, to help you build a better future.</h3>
 				</div>
 			</div>
 		</div>
@@ -57,9 +68,9 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-12 m-4 text-center">
-				<span class="col-sm-3 btn btn-primary btn-outline-primary"><i class="icon-shopping-cart"></i> Best Prices</span>
-				<span class="col-sm-3 btn btn-primary btn-outline-primary"><i class="icon-settings"></i> Instant Service</span>
-				<span class="col-sm-3 btn btn-primary btn-outline-primary"><i class="icon-quill"></i> Creative Design</span>
+				<span class="col-sm-3 btn btn-primary btn-outline-primary"><i class="icon-pen"></i> Quality Courses</span>
+				<span class="col-sm-3 btn btn-primary btn-outline-primary"><i class="icon-settings"></i> Logic Building</span>
+				<span class="col-sm-3 btn btn-primary btn-outline-primary"><i class="icon-quill"></i> Skill Building</span>
 			</div>
 		</div>
 	</div>
@@ -70,76 +81,30 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-8 offset-sm-2 text-center colorlib-heading" style="margin-bottom:0px!important; padding-bottom:0!important;">
-					<h2>Our Products</h2>
+					<h2>Most Viewed Courses</h2>
 				</div>
 			</div>
 			<div class="row row-pb-md">
-				<div class="col-lg-4 mb-4 text-center">
-					<div class="product-entry border">
-						<a href="#" class="prod-img">
-								<img src="images/item-1.jpg" class="img-fluid" alt="Free html5 bootstrap 4 template">
-							</a>
-						<div class="desc">
-							<h2><a href="#">Women's Boots Shoes Maca</a></h2>
-							<span class="price">$139.00</span>
+
+				<% data.forEach(function(course){ %>
+					<% if(parseFloat(course['course_views'].replace(/,/g, '')) > 36000){ %>
+						<div class="col-lg-3 mb-4" style="padding-bottom:0!important;">
+							<div class="product-entry border" style="padding-bottom:0!important;">
+								<a href="#" class="prod-img">
+									<center><img src="<%=course['course_img']%>" class="img-fluid" alt="<%=course['course_title']%>"></center>
+								</a>
+								<div class="desc" style="padding-bottom:0!important;">
+									<span><%=course['course_category']%></span>
+									<h2><a href="#"><%=course['course_title']%></a></h2>
+									<p>Course Views: <b><%=course['course_views']%></b>
+										<br>
+										Download Size: <b><%=course['course_size']%></b></p>
+								</div>
+							</div>
 						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 mb-4 text-center">
-					<div class="product-entry border">
-						<a href="#" class="prod-img">
-								<img src="images/item-2.jpg" class="img-fluid" alt="Free html5 bootstrap 4 template">
-							</a>
-						<div class="desc">
-							<h2><a href="#">Women's Minam Meaghan</a></h2>
-							<span class="price">$139.00</span>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 mb-4 text-center">
-					<div class="product-entry border">
-						<a href="#" class="prod-img">
-								<img src="images/item-3.jpg" class="img-fluid" alt="Free html5 bootstrap 4 template">
-							</a>
-						<div class="desc">
-							<h2><a href="#">Men's Taja Commissioner</a></h2>
-							<span class="price">$139.00</span>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 mb-4 text-center">
-					<div class="product-entry border">
-						<a href="#" class="prod-img">
-								<img src="images/item-4.jpg" class="img-fluid" alt="Free html5 bootstrap 4 template">
-							</a>
-						<div class="desc">
-							<h2><a href="#">Russ Men's Sneakers</a></h2>
-							<span class="price">$139.00</span>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 mb-4 text-center">
-					<div class="product-entry border">
-						<a href="#" class="prod-img">
-								<img src="images/item-5.jpg" class="img-fluid" alt="Free html5 bootstrap 4 template">
-							</a>
-						<div class="desc">
-							<h2><a href="#">Women's Boots Shoes Maca</a></h2>
-							<span class="price">$139.00</span>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 mb-4 text-center">
-					<div class="product-entry border">
-						<a href="#" class="prod-img">
-								<img src="images/item-6.jpg" class="img-fluid" alt="Free html5 bootstrap 4 template">
-							</a>
-						<div class="desc">
-							<h2><a href="#">Women's Boots Shoes Maca</a></h2>
-							<span class="price">$139.00</span>
-						</div>
-					</div>
-				</div>
+					<% } %>
+				<% }); %>
+
 			</div>
 		</div>
 	</div>

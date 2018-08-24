@@ -7,6 +7,7 @@ require('./config/dbconnection');
 
 const app = express();
 const shop = require('./routes/shop');
+let Student = require("./models/course");
 
 app.set("view engine", "ejs");
 app.use(express.static(path.join(__dirname, 'public')));

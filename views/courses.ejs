@@ -1,0 +1,47 @@
+<% include partials/header %>
+  <br>
+  <!-- <hr> -->
+
+	<style>
+		.parallax {
+			background-image: url("https://images.pexels.com/photos/7367/startup-photo.jpg");
+			min-height: 400px;
+			background-attachment: fixed;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+	</style>
+	<div class="parallax"></div>
+
+	<div class="colorlib-product" style="margin-bottom:0px!important; padding-bottom:0!important; margin-top:0!important; padding-top:64px!important;">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-8 offset-sm-2 text-center colorlib-heading" style="margin-bottom:0px!important; padding-bottom:0!important;">
+					<h2>All Courses</h2>
+				</div>
+			</div>
+			<div class="row row-pb-md">
+
+				<% data.forEach(function(course){ %>
+						<div class="col-lg-3 mb-4" style="padding-bottom:0!important;">
+							<div class="product-entry border" style="padding-bottom:0!important;">
+								<a href="#" class="prod-img">
+									<center><img src="<%=course['course_img']%>" class="img-fluid" alt="<%=course['course_title']%>"></center>
+								</a>
+								<div class="desc" style="padding-bottom:8px!important;">
+									<span><%=course['course_category']%></span>
+									<h2><a href="#"><%=course['course_title']%></a></h2>
+									<span>Course Views: <b><%=course['course_views']%></b>
+										<br>
+										Download Size: <b><%=course['course_size']%></b></span>
+								</div>
+							</div>
+						</div>
+				<% }); %>
+
+			</div>
+		</div>
+	</div>
+
+	<% include partials/footer %>
