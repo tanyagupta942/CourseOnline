@@ -20,6 +20,14 @@ router.get('/courses', function(req, res){
   });
 });
 
+router.get('/contact', function(req, res) {
+  res.render("contact");
+});
+
+router.get('/about', function(req, res) {
+  res.render("about");
+});
+
 router.get('/:id', function(req, res){
   id = req.params.id;
   Course.findById(id, function(err, course){
@@ -28,14 +36,6 @@ router.get('/:id', function(req, res){
     else
       res.render("course", {course: course});
   });
-})
-
-router.get('/about', function(req, res) {
-  res.render("about");
-});
-
-router.get('/contact', function(req, res) {
-  res.render("contact");
 });
 
 // router.get('/index', function(req, res) {
