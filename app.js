@@ -17,6 +17,6 @@ app.use(bodyParser.urlencoded({extended:false}));
 app.use('/', shop);
 
 const port = 3000 || process.env.PORT;
-app.listen(port, function(){
+app.listen(port, process.env.IP, function(){
   console.log("Server running at port " + port);
 });
