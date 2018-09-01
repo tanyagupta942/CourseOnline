@@ -6,10 +6,8 @@ router.get('/', function(req, res) {
   Course.find({}, function(err, courses){
     if(err)
       res.render("404page");
-    else{
-      console.log(courses);
+    else
       res.render("index", {data: courses});
-    }
   });
 });
 
@@ -17,21 +15,18 @@ router.get('/courses', function(req, res){
   Course.find({}, function(err, courses){
     if(err)
       res.render("404page");
-    else{
-      // console.log(courses);
+    else
       res.render("courses", {data: courses});
-    }
   });
 });
 
-router.get('/course/:id', function(req, res){
+router.get('/:id', function(req, res){
   id = req.params.id;
   Course.findById(id, function(err, course){
     if(err)
       res.render("404page");
-    else{
-      res.render("coursedetail", {course: course});
-    }
+    else
+      res.render("course", {course: course});
   });
 })
 

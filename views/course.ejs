@@ -1,0 +1,53 @@
+<% include partials/header %>
+  <hr>
+  </nav>
+  <br>
+
+
+  <div class="colorlib-product" style="padding-top:0px!important; padding-bottom:32px!important;">
+    <div class="container">
+      <div class="row row-pb-lg product-detail-wrap" style="padding-bottom:32px!important;">
+        <div class="col-sm-1"></div>
+        <div class="col-sm-4">
+          <div class="item">
+            <div class="product-entry border">
+              <a href="#" class="prod-img">
+                <img src="<%= course['course_img'] %>" style="border: 3px solid rgba(0,0,0,0.1); padding: 4px; width:100%;" class="img-fluid" alt="<%= course['course_title'] %>">
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="product-desc">
+            <h3 style="text-align: justify;"><%= course['course_title'] %></h3>
+            <p class="description col-sm-12 row">
+              <span class="col-sm-4">Category <br><b><%= course['course_category'] %></b></span>
+              <span class="col-sm-4">Course Size <br><b><%= course['course_size'] %></b></span>
+              <span class="col-sm-4">Course Views <br><b><%= course['course_views'] %></b></span>
+            </p>
+            <p>
+              <%= course['course_desc'] %>
+            </p>
+            <p class="addtocart"><a href="<%= course['course_download_link'] %>" class="btn btn-primary btn-addtocart"><i class="icon-download"></i> Download Course</a></p>
+          </div>
+        </div>
+        <div class="col-sm-1"></div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-1"></div>
+        <div class="col-sm-10">
+          <span class="btn btn-primary" style="border-radius:0!important; background: rgba(0,0,0,0.8);">Related Courses</span>
+          <div class="border" style="padding: 16px; margin-top:12px;">
+            <% course['related_posts'].forEach(function(post){ %>
+                <a href="<%= post[1] %>" class="btn btn-primary" style="border-radius:0!important; margin: 8px!important;"><%= post[0] %></a>
+            <% }); %>
+          </div>
+        </div>
+        </div>
+        <div class="col-sm-10"></div>
+      </div>
+    </div>
+  </div>
+
+  <% include partials/footer %>
