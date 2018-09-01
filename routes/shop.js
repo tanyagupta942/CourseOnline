@@ -2,6 +2,13 @@ const express = require('express');
 const router = express.Router();
 let Course = require("../models/course");
 
+// router.get('/index', function(req, res) {
+//   Course.create({}, function(err, res) {
+//     console.log("Data Inserted")
+//   });
+//   res.send("ok");
+// });
+
 router.get('/', function(req, res) {
   Course.find({}, function(err, courses){
     if(err)
@@ -37,13 +44,6 @@ router.get('/about', function(req, res) {
 router.get('/contact', function(req, res) {
   res.render("contact");
 });
-
-// router.get('/index', function(req, res) {
-//   Course.create(.., function(err, res) {
-//     console.log("Data Inserted")
-//   });
-//   res.send("ok");
-// });
 
 router.post('/', function(req, res) {
   // return res.json({});

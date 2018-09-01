@@ -3,7 +3,9 @@ const mongoose = require('mongoose');
 // Map global promises
 mongoose.Promise = global.Promise;
 // Mongoose Connect
-mongoose.connect('mongodb://localhost/shoponline', { useNewUrlParser: true })
+// connectionString = 'mongodb://localhost/shoponline';
+connectionString = 'mongodb://goelaakash79:mahi221B@ds141812.mlab.com:41812/coursesonline';
+mongoose.connect(connectionString, { useNewUrlParser: true })
   .then(function() {
     console.log("MongoDB Connected");
   })
