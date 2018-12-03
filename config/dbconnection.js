@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
 // Mongoose Connect
 // connectionString = 'mongodb://localhost/shoponline';
-connectionString = 'mongodb://goelaakash79:mahi221B@ds141812.mlab.com:41812/coursesonline';
+connectionString = 'mongodb://username:password@ds141812.mlab.com:41812/coursesonline';
 mongoose.connect(connectionString, { useNewUrlParser: true })
   .then(function() {
     console.log("MongoDB Connected");
